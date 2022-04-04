@@ -1,6 +1,6 @@
 # Dreamquark CI security report
 
-This action is meant for generating differential security reports based on [Trivy](https://github.com/aquasecurity/trivy) to be published as a comment of a pull request. 
+This action is meant for generating differential security reports based on [Trivy](https://github.com/aquasecurity/trivy) to be published as a coment of a pull request. 
 
 From a base image used as reference, it underlies the new security vulnerabilities and the one that have been removed after changes in your source code. 
 
@@ -98,7 +98,7 @@ base-tag | `string` | `latest` | `true` | The tag of the base image used as refe
 new-tag | `string` | `security-test` | `true` | The tag of the new image used to seek out new and removed vulnerabilities |a
 repo | `string` | `dreamquark-ai` | `true` |  Your GitHub organization name |a
 repo | `string` |  | `true` |  Repository on which the action is triggered |a
-pr-nb | `string` |  | `true` | PR number on which to comment with the security report |a
+pr-nb | `string` |  | `true` | PR number on which to coment with the security report |a
 topic | `string` | `image` | `true` | The title of the report: used to identify the security report |a
 
 
@@ -112,7 +112,7 @@ As you may notice in the GitHub action and orb's command definition, the last st
   * A `new.json` file that will contain a list of all the vulnerabilities that have been added (i.e: the one which are not in the report of the base image but are in the report of the new image).
 
 * A `md-template.sh` script which will, from the two previously generated json files, generate a markdown summary with two tables containing the new and the removed vulnerabilities.
-* A `comment-pr.sh` script that will comment the specified pull request with the previously generated markdown report. Basically:
-  * It looks like if a report already exists by parsing all the comments and checking if one matches with the specified topic.
-  * If so, it deletes the previous comment (the previous security report in the pull request).
-  * And to finish it adds a comment in the pull request using the markdown report.
+* A `coment-pr.sh` script that will coment the specified pull request with the previously generated markdown report. Basically:
+  * It looks like if a report already exists by parsing all the coments and checking if one matches with the specified topic.
+  * If so, it deletes the previous coment (the previous security report in the pull request).
+  * And to finish it adds a coment in the pull request using the markdown report.

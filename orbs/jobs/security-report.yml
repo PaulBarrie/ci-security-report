@@ -1,5 +1,5 @@
 description: |
-  Create a markdown security report with new and removed vulnerabilities and add it as a comment pull request
+  Create a markdown security report with new and removed vulnerabilities and add it as a coment pull request
 
 parameters:
     image:

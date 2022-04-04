@@ -4,7 +4,7 @@ set -e
 FOLDER=$(readlink -f "${BASH_SOURCE[0]}" | xargs dirname)
 . "${FOLDER}/parse-json.sh"
 . "${FOLDER}/md-template.sh"
-. "${FOLDER}/comment-pr.sh"
+. "${FOLDER}/coment-pr.sh"
 
 
 base_report="$FOLDER/reports/report-base.json"
@@ -66,5 +66,5 @@ echo "Compare the differences between $base_report and $new_report."
 get_differences $base_report $new_report $report_folder
 echo "Generate the report for $image:$base_tag->$new_tag."
 generate_markdown $report_folder $report_folder $image $base_tag $new_tag $topic
-echo "Publish the report as a comment of the PR #$pr to $repo related to $topic"
-comment_pr $repo $pr $topic $orga
+echo "Publish the report as a coment of the PR #$pr to $repo related to $topic"
+coment_pr $repo $pr $topic $orga

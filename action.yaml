@@ -20,7 +20,7 @@ inputs:
     description: 'Repository on which the action is triggered'
     required: true
   pr-nb:
-    description: 'PR number on which to comment with the security report'
+    description: 'PR number on which to coment with the security report'
     required: true
   topic:
     description: 'The title of the report: used to identify the security report'

@@ -1,7 +1,7 @@
 version: 2.1
 
 description: >
-  This orb allow to publish  differential security reports as PR comments
+  This orb allow to publish  differential security reports as PR coments
 # This information will be displayed in the orb registry and is not mandatory.
 display:
   home_url: https://dreamquark.com
